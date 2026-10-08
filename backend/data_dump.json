@@ -1,0 +1,187 @@
+[
+    {
+        "model": "users.customuser",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$B3IAHUVkRKiU6Fyc4D6gFR$9pJPme7NOwu6ALJxuzBePaOcGwW673XET+xjDlBXUdk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "alice",
+            "first_name": "",
+            "last_name": "",
+            "email": "alice@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-07-24T15:02:52.106Z",
+            "profile_picture": "",
+            "bio": "Software developer and aura designer",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.customuser",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$NDqpwB9SOmZmmmViSC9Idy$HY+w5Lk7S+0MffxsAKyfUVCqElfDAw+FpNG7XKB/hv8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "mohanrajkrishnamoorthy21@gmail.com",
+            "first_name": "",
+            "last_name": "",
+            "email": "mohanrajkrishnamoorthy21@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-07-24T15:06:04.490Z",
+            "profile_picture": "profile_pics/images.jpg",
+            "bio": "#great",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.customuser",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$aJ6KcwQnJI3BHi5sn5ixrp$fOglWolqErPxV8fYq2oFnB5rikMJmlb0fvcMQ+e3gMc=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "charlie_mobile",
+            "first_name": "",
+            "last_name": "",
+            "email": "charlie_mob@example.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-07-24T15:11:38.002Z",
+            "profile_picture": "",
+            "bio": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "alice"
+            ],
+            "content": "This is my first post on Aura! #sparkle",
+            "image": "",
+            "created_at": "2026-07-24T15:03:05.925Z",
+            "updated_at": "2026-07-24T15:03:05.925Z"
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 2,
+        "fields": {
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "content": "#pikachu",
+            "image": "posts/images.jpg",
+            "created_at": "2026-07-24T15:07:32.646Z",
+            "updated_at": "2026-07-24T15:07:32.646Z"
+        }
+    },
+    {
+        "model": "posts.post",
+        "pk": 3,
+        "fields": {
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "content": "#best",
+            "image": "",
+            "created_at": "2026-07-24T15:08:40.047Z",
+            "updated_at": "2026-07-24T15:08:40.047Z"
+        }
+    },
+    {
+        "model": "comments.comment",
+        "pk": 1,
+        "fields": {
+            "post": 1,
+            "user": [
+                "alice"
+            ],
+            "text": "Love this style!",
+            "created_at": "2026-07-24T15:03:36.804Z"
+        }
+    },
+    {
+        "model": "follows.follow",
+        "pk": 1,
+        "fields": {
+            "follower": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "following": [
+                "alice"
+            ],
+            "created_at": "2026-07-24T15:07:40.323Z"
+        }
+    },
+    {
+        "model": "likes.like",
+        "pk": 1,
+        "fields": {
+            "post": 1,
+            "user": [
+                "alice"
+            ],
+            "created_at": "2026-07-24T15:03:16.521Z"
+        }
+    },
+    {
+        "model": "likes.like",
+        "pk": 2,
+        "fields": {
+            "post": 2,
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "created_at": "2026-07-24T15:07:36.025Z"
+        }
+    },
+    {
+        "model": "likes.like",
+        "pk": 3,
+        "fields": {
+            "post": 3,
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "created_at": "2026-07-24T15:08:43.944Z"
+        }
+    },
+    {
+        "model": "likes.like",
+        "pk": 4,
+        "fields": {
+            "post": 1,
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "created_at": "2026-07-24T15:08:46.449Z"
+        }
+    },
+    {
+        "model": "authtoken.token",
+        "pk": "2df8cb646e08842dc8488e02096b55ee6bdc865e",
+        "fields": {
+            "user": [
+                "mohanrajkrishnamoorthy21@gmail.com"
+            ],
+            "created": "2026-07-24T15:06:04.968Z"
+        }
+    },
+    {
+        "model": "authtoken.token",
+        "pk": "9b4a54512730b899fc4dd25951246e200736c304",
+        "fields": {
+            "user": [
+                "charlie_mobile"
+            ],
+            "created": "2026-07-24T15:11:38.283Z"
+        }
+    }
+]

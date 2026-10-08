@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium social media experience with smooth glassmorphism design, instant updates, and advanced connections.">
+    <title>Aura — Premium Social Experience</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="aura-app" class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-nav" id="main-sidebar">
+            <div class="brand-logo">
+                <div class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h1 class="brand-name">Aura</h1>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#feed" class="nav-item active" id="nav-feed">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Feed</span>
+                </a>
+                <a href="#profile" class="nav-item" id="nav-profile">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#settings" class="nav-item" id="nav-settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn btn-logout" id="btn-logout" style="display: none;">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="mobile-header">
+                <div class="brand-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <span class="brand-name">Aura</span>
+                </div>
+                <div class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </header>
+
+            <!-- Dynamic view injection root -->
+            <section class="content-viewport" id="app-content">
+                <!-- Views will be injected here via app.js -->
+            </section>
+        </main>
+
+        <!-- Suggestions & Profile Widgets -->
+        <aside class="sidebar-widgets" id="widgets-sidebar">
+            <!-- Current User profile widget -->
+            <div class="widget-card user-mini-profile" id="user-widget" style="display: none;">
+                <div class="widget-profile-bg"></div>
+                <div class="widget-profile-avatar-container">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150" alt="Avatar" class="widget-avatar" id="widget-user-avatar">
+                </div>
+                <div class="widget-profile-info">
+                    <h3 class="widget-user-name" id="widget-user-fullname">Loading User...</h3>
+                    <span class="widget-user-handle" id="widget-user-handle">@username</span>
+                </div>
+            </div>
+
+            <!-- Suggestions widget -->
+            <div class="widget-card suggestions-widget" id="suggestions-widget" style="display: none;">
+                <h3 class="widget-title">Who to Follow</h3>
+                <div class="suggestions-list" id="widget-suggestions-list">
+                    <!-- Dynamic suggested users -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Bottom Navigation for Mobile -->
+    <nav class="mobile-nav-bar" id="mobile-nav" style="display: none;">
+        <a href="#feed" class="mobile-nav-item active" id="mob-nav-feed">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <a href="#profile" class="mobile-nav-item" id="mob-nav-profile">
+            <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="#settings" class="mobile-nav-item" id="mob-nav-settings">
+            <i class="fa-solid fa-gear"></i>
+        </a>
+        <button class="mobile-nav-item btn-mobile-logout" id="btn-mobile-logout-nav">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+    </nav>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-notifications"></div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

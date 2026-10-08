@@ -1,0 +1,40 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+backend/media/
+.env
+backend/.env
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+
+# Environment & Secret files
+.env*
+!.env.example
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary directories
+.freebuff/
+scratch/
